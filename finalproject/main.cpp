@@ -24,7 +24,7 @@ Mail: angelag8562@student.vvc.edu
 */
 
 #include<iostream>
-#include"mountain.h"
+#include"mountaininfo.h"
 #include<iomanip>
 #include<climits>
 

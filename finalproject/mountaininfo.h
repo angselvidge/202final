@@ -23,6 +23,7 @@ return this->name;
 string get_country(){
 return this->country;
 }
+
 int get_elevation(){
 return this->elevation;
 }
