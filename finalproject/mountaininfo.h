@@ -9,12 +9,13 @@ int elevation;
 
 public:
 void setter(string name,string country,int elevation){ //public setter #1docs
+// use this -> for each data member
 this->name=name;
 this->country=country;
 this->elevation=elevation;
 }
 
-//create strings for country and name, while elevation gets int 
+//create strings (variables) for country and name, while elevation gets int 
 
 string get_name(){
 return this->name;

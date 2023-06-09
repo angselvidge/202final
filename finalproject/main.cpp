@@ -33,7 +33,7 @@ int minElevation(Mountain mnt[],int x){ // min elevation to return elevation
 int min=INT_MAX; // max height for given mnt
 int i;
 for (i=0;i<7;++i){ // 7mnt in total, dont use min
-    if(mnt[i].get_elevation() < min)
+    if(mnt[i].get_elevation() < min) // abreviate mountain with mnt
         min = mnt[i].get_elevation(); //
 }
 return min;
@@ -41,6 +41,7 @@ return min;
 
 int main(){
 Mountain mnt[7]; // setters and getters # 1, use the already given info on docs, keep mnt in order
+// 7 instances of mountain objects
 mnt[0].setter("Chimborazo","Ecuador",20549);
 mnt[1].setter("Matterhorn","Switzerland",14692);
 mnt[2].setter("Olympus","Greece",9573);
@@ -51,7 +52,7 @@ mnt[6].setter("Zugspitze","Switzerland",9719);
 
 cout<<setw(30)<<"Mountain"<<setw(20)<<" Country "<<setw(30)<<" Elevation "<<endl;
 
-for (int i=0;i<7;i++){ 
+for (int i=0;i<7;i++){ // use 7 instead of 0, 0 output an error
     // print out all 7 mountain ranges with ft and mt
     cout<<setw(30)<<mnt[i].get_name()<<" "<<setw(20)<<mnt[i].get_country()
     <<" "<<setw(20)<<mnt[i].get_elevation()<<" ft "<<mnt[i].toMeters()
@@ -61,7 +62,7 @@ int min = minElevation(mnt,7);// min elevation # 4
 int i;
 for(i=0;i<7;i++){ // shortest/ lowest mountain elevation
     if(min == mnt[i].get_elevation()){
-        cout<<"Lowest elevation Mountain: "<<mnt[i].get_name()<<": "
+        cout<<"Shortest Mountain: "<<mnt[i].get_name()<<": "
         <<mnt[i].get_elevation()<<endl;
             break;
 }
